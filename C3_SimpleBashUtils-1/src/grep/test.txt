@@ -1,0 +1,11 @@
+ Pay your attention that there is ```| grep LEAK:``` command. We use it to short leaks output to see only lines with
+  leaks if they are there. If you want to see the whole output, just remove this command.
+
+  When you run your executable file using _leaks_ you may see an error:
+  > dyld: could not load inserted library ‘/usr/local/lib/libLeaksAtExit.dylib’ because image not found
+
+  It’s because _leaks_ did not find _libLeaksAtExit.dylib_ library.
+  You need to type the following commands in this case.
+  ```sh
+  cd /usr/local/lib 
+  want
